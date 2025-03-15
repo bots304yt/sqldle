@@ -1,9 +1,8 @@
 import { CrossIcon } from "@/components/UI/Icons";
 import Modal from "@/components/UX/Modal";
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function HowToModal({close}: {close: () => void}){
-    const { t } = useLanguage();
+    // const { t } = useLanguage();
 
     return (<Modal close={close}>
         <div className="bg-white max-h-[90vh] overflow-y-auto max-w-[600px] p-4 rounded-md">
@@ -16,10 +15,10 @@ export default function HowToModal({close}: {close: () => void}){
                 <p className="font-semibold">How to play:</p>
                 <ol className="list-decimal px-5">
                     <li>Read the database challenge and understand the task</li>
-                    <li>Drag words from the "Available Words" section to the "Your SQL Query" section</li>
+                    <li>{'Drag words from the "Available Words" section to the "Your SQL Query" section'}</li>
                     <li>Arrange the words in the correct order to form a valid SQL query</li>
-                    <li>To remove a word from your query, drag it back to the "Available Words" section or outside the query area</li>
-                    <li>Click "Check Query" to verify your solution</li>
+                    <li>{'To remove a word from your query, drag it back to the "Available Words" section or outside the query area'}</li>
+                    <li>{'Click "Check Query" to verify your solution'}</li>
                     <li>You have 5 attempts to solve each challenge</li>
                     <li>Use the color feedback to refine your query in your next attempt</li>
                 </ol>
@@ -29,7 +28,7 @@ export default function HowToModal({close}: {close: () => void}){
                     <li>Remember the basic structure of SQL queries (SELECT, FROM, WHERE, etc.)</li>
                     <li>Some challenges may require JOINs, GROUP BY, or other SQL features</li>
                     <li>Use the color feedback to refine your query</li>
-                    <li>Capitalization doesn't matter, but the order of words does</li>
+                    <li>{"Capitalization doesn't matter, but the order of words does"}</li>
                 </ul>
                 <p>Test your SQL knowledge and see how quickly you can solve all the challenges!</p>
             </div>

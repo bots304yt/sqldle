@@ -2,7 +2,6 @@ import Confetti from "@/components/UI/Confetti";
 import { ArrowIcon, CrossIcon, TrophyIcon } from "@/components/UI/Icons";
 import Modal from "@/components/UX/Modal";
 import { useGame } from "@/context/GameContext";
-/* import { useLanguage } from "@/context/LanguageContext"; */
 
 export default function WinModal({close}: {close: () => void}) {
     /* const { t, format } = useLanguage(); */
@@ -16,7 +15,7 @@ export default function WinModal({close}: {close: () => void}) {
                         <TrophyIcon className="w-6 h-6 text-yellow-500 animate-bend"/>
                         <h1 className="font-semibold text-xl">Congratulations!</h1>
                     </div>
-                    <button className="ghost p-1" onClick={close}s><CrossIcon className="w-6 h-6 cursor-pointer"/></button>
+                    <button className="ghost p-1" onClick={close}><CrossIcon className="w-6 h-6 cursor-pointer"/></button>
                 </div>
                 <div className="animate-appearbottom w-full">
                     <div className="text-gray-400 w-full mb-2">
