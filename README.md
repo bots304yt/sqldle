@@ -1,4 +1,4 @@
-# SQLdle
+# SQLdle  [![Live Demo](https://img.shields.io/badge/LIVE-DEMO-green?style=for-the-badge&logo=vercel)](https://sqldle.vercel.app/)
 
 
 
