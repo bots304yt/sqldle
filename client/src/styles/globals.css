@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+ */
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+
+button{
+  @apply cursor-pointer rounded-md;
+}
+button.ghost{
+  @apply bg-transparent hover:bg-blue-900/5;
+}
+button.dark{
+  @apply bg-black text-white hover:bg-black/80;
+}
+
+button:disabled{
+  @apply cursor-not-allowed opacity-60 hover:bg-auto;
+}
+button.top{
+  @apply flex items-center gap-2 p-2 px-4 border border-gray-200
+}
+
+.custom-select{
+  @apply cursor-pointer rounded-md border border-gray-300 px-3 py-2;
+}
+.custom-select .options{
+  @apply my-1 cursor-pointer rounded-md bg-white shadow-md border border-black/5;
+}
+.custom-select .options p{
+  @apply p-2 px-4 cursor-pointer hover:bg-black/5;
+}
+
+.item.wrong{
+  @apply bg-gray-800;
+}
+.item.correct{
+  @apply bg-green-500;
+}
+.item.incorrect{
+  @apply bg-yellow-500;
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform-origin: center bottom;
+  animation: fall 4s linear infinite;
+}
+
+.confetti.square {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+.confetti.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Animations */
+@keyframes fall {
+  0% {
+      transform: translateY(0) rotate(0deg);
+  }
+  100% {
+      transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+@keyframes slowAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slow-appear {
+  animation: slowAppear 0.3s ease-out;
+}
+/* Modal */
+.no-scroll {
+  overflow: hidden;
+}
